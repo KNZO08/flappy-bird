@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Growth Editing — Mogrts Premiere Pro</title>
+<meta name="description" content="Growth Editing : des mogrts Premiere Pro prêts à glisser sur ta timeline. Textes, transitions, interfaces et pop-ups animés, 100% personnalisables.">
+<meta name="theme-color" content="#060a1c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2716%27 fill=%27%237c4dff%27/%3E%3Ctext x=%2732%27 y=%2743%27 font-family=%27Arial%27 font-weight=%27900%27 font-size=%2730%27 text-anchor=%27middle%27 fill=%27white%27%3EGE%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="fonts/Poppins-800-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<canvas id="fx" aria-hidden="true"></canvas>
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- Bandeau flottant -->
+<div class="buy-pill" id="buyPill">
+  <span class="pr-icon" aria-hidden="true">Pr</span>
+  <a class="pill-btn" href="https://payhip.com/GrowthEditing" target="_blank" rel="noopener">Obtenir les mogrts <span class="arr">→</span></a>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <header class="hero wrap">
+    <div class="hero-text reveal">
+      <div class="logo" aria-label="Growth Editing">
+        <span class="script">Growth</span>
+        <h1 class="grad">Editing</h1>
+      </div>
+      <p class="lead">Des mogrts <strong>Premiere Pro</strong> ultra propres, à glisser sur ta timeline et à personnaliser en quelques secondes.</p>
+      <a class="btn btn-primary magnetic" href="https://payhip.com/GrowthEditing" target="_blank" rel="noopener">Obtenir les mogrts <span class="arr">→</span></a>
+      <a class="link-soft" href="#boutique">ou voir tous les produits ↓</a>
+    </div>
+
+    <div class="hero-visual reveal" style="--d:.15s">
+      <div class="stage-card" data-tilt="6">
+        <div class="rays" aria-hidden="true"></div>
+        <div class="glow" aria-hidden="true"></div>
+        <div class="hero-box" id="heroBox"></div>
+        <span class="chip c1">Glisser-déposer</span>
+        <span class="chip c2">100% modifiable</span>
+        <span class="chip c3">Premiere Pro</span>
+        <span class="chip c4" id="heroCount">15 mogrts</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
+
+  <!-- POURQUOI -->
+  <section class="wrap features reveal">
+    <div class="glass">
+      <h2 class="h2 center">Du motion design <em>prêt à l'emploi.</em></h2>
+      <p class="sub center">Glisse. Dépose. Publie.</p>
+
+      <div class="feat-grid">
+        <article class="feat reveal">
+          <div class="stage dark" data-vis><div class="sc sc-drag">
+            <div class="panel"><i></i><i></i><i></i></div>
+            <div class="tl"><b></b><b></b></div>
+            <div class="item"></div>
+            <div class="cursor"></div>
+          </div></div>
+          <h3>Glisser-déposer</h3>
+          <p>Fais glisser le mogrt sur ta timeline Premiere Pro et c'est prêt. Pas d'extension à installer, pas de réglage compliqué.</p>
+        </article>
+
+        <article class="feat reveal" style="--d:.1s">
+          <div class="stage dark" data-vis><div class="sc sc-ctrl">
+            <div class="row"><span>Texte</span><div class="trk"><i style="--t:4.2s;--w:70%"></i></div></div>
+            <div class="row"><span>Vitesse</span><div class="trk"><i style="--t:3.4s;--w:45%"></i></div></div>
+            <div class="row"><span>Taille</span><div class="trk"><i style="--t:5s;--w:85%"></i></div></div>
+            <div class="swatches"><u></u><u></u><u></u><u></u><s></s></div>
+          </div></div>
+          <h3>Contrôle total</h3>
+          <p>Change le texte, les couleurs, la taille ou le timing directement dans le panneau Graphiques essentiels, sans ouvrir After Effects.</p>
+        </article>
+
+        <article class="feat reveal" style="--d:.2s">
+          <div class="stage dark" data-vis><div class="mosaic" id="mosaic"></div></div>
+          <h3><em id="featCount">15</em> Animations</h3>
+          <p>Pop-ups, interfaces, transitions, effets de texte : tout ce qu'il faut pour rendre tes vidéos plus vivantes et plus pro.</p>
+        </article>
+      </div>
+
+      <a class="btn btn-dark magnetic" href="#boutique">Accéder maintenant</a>
+    </div>
+  </section>
+
+  <!-- CONTENU INCLUS -->
+  <section class="wrap included" id="contenu">
+    <h2 class="title-script reveal"><span class="script">Contenu</span><span class="serif">inclus</span></h2>
+    <div class="tabs reveal" id="tabs" role="tablist">
+      <button class="tab on" role="tab" data-cat="phares">Animations Phares</button>
+      <button class="tab" role="tab" data-cat="interfaces">Interfaces &amp; Apps</button>
+      <button class="tab" role="tab" data-cat="effets">Transitions &amp; Effets</button>
+    </div>
+    <div class="carousel reveal" id="carousel"><div class="car-track" id="carTrack"></div></div>
+    <div class="car-hint">← Fais glisser →</div>
+  </section>
+
+  <!-- COMPTEUR -->
+  <section class="wrap counter reveal">
+    <div class="big"><span class="num" id="bigNum" data-to="15">0</span><span class="txt">mogrts</span></div>
+    <p class="sub center">Un pack de motion design pensé pour aller vite, sans jamais faire cheap.</p>
+    <a class="btn btn-dark magnetic" href="https://payhip.com/GrowthEditing" target="_blank" rel="noopener">Obtenir les mogrts</a>
+  </section>
+
+  <!-- BONUS -->
+  <section class="wrap bonus reveal">
+    <div class="bonus-card" data-tilt="3">
+      <span class="badge-pill">Avec chaque mogrt</span>
+      <h2 class="gothic">Bonus</h2>
+      <div class="stage dark wide" data-vis><div class="sc sc-install">
+        <div class="steps"><b class="s1">1</b><b class="s2">2</b><b class="s3">3</b></div>
+        <div class="files"><u>.mogrt</u></div>
+        <div class="pr-mini">Pr</div>
+        <div class="play"></div>
+      </div></div>
+      <div class="bonus-head"><h3>Installation express</h3><span class="chip-blue">.mogrt</span></div>
+      <p>Importe le fichier dans Premiere Pro, dépose-le sur ta timeline et modifie textes, couleurs et tailles depuis le panneau Graphiques essentiels. Zéro plugin, zéro prise de tête.</p>
+      <a class="btn btn-dark magnetic" href="https://payhip.com/GrowthEditing" target="_blank" rel="noopener">Obtenir les mogrts</a>
+    </div>
+  </section>
+
+  <!-- BOUTIQUE -->
+  <section class="wrap shop" id="boutique">
+    <h2 class="title-script reveal"><span class="script">La boutique</span><span class="serif">Tous les mogrts</span></h2>
+    <p class="sub center reveal">3,00 € l'unité · paiement sécurisé sur Payhip</p>
+    <div class="shop-grid" id="shopGrid"></div>
+    <div class="center reveal" style="margin-top:3rem">
+      <a class="btn btn-primary magnetic" href="https://payhip.com/GrowthEditing" target="_blank" rel="noopener">Voir toute la boutique <span class="arr">→</span></a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="watermark script" aria-hidden="true">Growth Editing</div>
+  <div class="wrap foot-in">
+    <div>
+      <div class="foot-logo"><span class="script">Growth</span> <b>Editing</b></div>
+      <p>Mogrts Premiere Pro — signés Growth Editing.</p>
+    </div>
+    <a class="pill-btn" href="https://payhip.com/GrowthEditing" target="_blank" rel="noopener">Boutique Payhip →</a>
+  </div>
+  <p class="copy">© <span id="year">2026</span> Growth Editing. Tous droits réservés.</p>
+</footer>
+
+<!-- Aide -->
+<button class="help" id="helpBtn" aria-label="Questions fréquentes">?</button>
+<dialog id="faq">
+  <button class="x" id="faqClose" aria-label="Fermer">✕</button>
+  <h3>Questions fréquentes</h3>
+  <details open><summary>C'est compatible avec quoi ?</summary><p>Les mogrts sont faits pour Adobe Premiere Pro (utilise une version récente du logiciel).</p></details>
+  <details><summary>Comment j'installe un mogrt ?</summary><p>Ouvre le panneau Graphiques essentiels, clique sur « Installer un modèle de titre animé » et choisis le fichier .mogrt. Il apparaît ensuite dans tes modèles, prêt à glisser sur la timeline.</p></details>
+  <details><summary>Je peux tout personnaliser ?</summary><p>Oui : textes, couleurs, taille, position et vitesse se règlent depuis le panneau Graphiques essentiels.</p></details>
+  <details><summary>Comment je reçois mes fichiers ?</summary><p>Tu paies en toute sécurité sur Payhip, puis tu reçois ton lien de téléchargement.</p></details>
+  <a class="btn btn-primary" href="https://payhip.com/GrowthEditing" target="_blank" rel="noopener">Aller à la boutique →</a>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
