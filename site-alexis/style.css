@@ -1,5 +1,6 @@
 /* ============ Growth Editing ============ */
 :root{
+  color-scheme:dark;
   --bg:#060a1c; --bg2:#0c1238;
   --violet:#7c4dff; --violet-2:#a78bfa; --violet-3:#c9bcff; --indigo:#5b3df5;
   --ink:#f5f6ff; --muted:#a3abd0; --line:rgba(167,139,250,.28);
